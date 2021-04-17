@@ -23,14 +23,12 @@ public class MyRESTController {
         return allEmployees;
     }
 
-
     /**Аннотация @PathVariable используется для
      * получения значения переменной из адреса запроса */
     @GetMapping("/employees/{id}")
     public Employee getEmployee(@PathVariable int id) {
 
         Employee employee = employeeService.getEmployee(id);
-
 
         return employee;
     }
